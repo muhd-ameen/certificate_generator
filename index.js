@@ -7,24 +7,24 @@ const { PDFDocument, rgb, degrees } = PDFLib;
 
 
 submitBtn.addEventListener("click", () => {
-    const val =userName.value;
-    if (val.trim() !== "" && userName.checkValidity()) {
-        // console.log(val);
-        generatePDF(val);
-      } else {
-        userName.reportValidity();
-      }
+  const val = userName.value;
+  if (val.trim() !== "" && userName.checkValidity()) {
+    // console.log(val);
+    generatePDF(val);
+  } else {
+    userName.reportValidity();
+  }
 });
 const generatePDF = async (name) => {
-    const existingPdfBytes = await fetch("Certificate.pdf").then((res) =>
-      res.arrayBuffer()
-    );
+  const existingPdfBytes = await fetch("Certificate.pdf").then((res) =>
+    res.arrayBuffer()
+  );
 
-    // Load a PDFDocument from the existing PDF bytes
-    const pdfDoc = await PDFDocument.load(existingPdfBytes);
-    pdfDoc.registerFontkit(fontkit);
+  // Load a PDFDocument from the existing PDF bytes
+  const pdfDoc = await PDFDocument.load(existingPdfBytes);
+  pdfDoc.registerFontkit(fontkit);
 
-    
+
   //get font
   const fontBytes = await fetch("Sanchez-Regular.ttf").then((res) =>
   res.arrayBuffer()
