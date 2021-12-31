@@ -7,7 +7,7 @@ const { PDFDocument, rgb, degrees } = PDFLib;
 
 
 submitBtn.addEventListener("click", () => {
-  const val = userName.value;
+  const val = userName.value.toUpperCase();
   if (val.trim() !== "" && userName.checkValidity()) {
     // console.log(val);
     generatePDF(val);
