@@ -8,21 +8,24 @@
     <link rel="icon" type="image/png" href="favicon.png"/>
 </head>
 <body>
-
-    <header>
-        <!-- <div class="heading_text">
-            <h1>Create Certificates for Free in Minutes</h1>
-            <h2>Make unique certificates in minutes. No design skills needed.</h2>
-        </div> -->
-      
-    </header>
-    <main>
-        <div>
-            <input type="text" name="Name" class="question" id="name" required autocomplete="off" />
-            <label for="name"><span>What's your name?</span></label>
-            <input type="submit" id="submitBtn" value="Get Certificate"/>
-        </div>
-    </main>
+    <div class="container">
+        <header>
+            <!-- <div class="heading_text">
+                <h1>Create Certificates for Free in Minutes</h1>
+                <h2>Make unique certificates in minutes. No design skills needed.</h2>
+            </div> -->
+            
+        </header>
+        <img class="header_image" src="bg_header.jpeg">
+        <main>
+            <div>
+                <p>സർട്ടിഫിക്കറ്റിൽ വരേണ്ട രൂപത്തിൽ നിങ്ങളുടെ പേര് താഴെ ഇംഗ്ലീഷിൽ ടൈപ്പ് ചെയ്യുക. ശേഷം Get Certificate എന്ന ഓപ്‌ഷനിൽ ക്ലിക്ക് ചെയ്യുക.</p>
+                <input type="text" name="Name" class="question" id="name" required autocomplete="off" />
+                <label for="name"><span>What's your name?</span></label>
+                <input type="submit" id="submitBtn" value="Get Certificate"/>
+            </div>
+        </main>
+    </div>
     <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
     <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
     <script src="filesaver.js"></script>
