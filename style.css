@@ -57,11 +57,11 @@ input:focus {
   }
 input.question{
   font-size: 48px;
-  font-weight: 300;
+  font-weight: 250;
   border-radius: 2px;
   margin: 0;
   border: none;
-  width: 80%;
+  width: 60%;
   background: rgba(0, 0, 0, 0);
   transition: padding-top 0.2s ease, margin-top 0.2s ease;
   overflow-x: hidden;
