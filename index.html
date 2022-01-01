@@ -8,6 +8,15 @@
     <link rel="icon" type="image/png" href="favicon.png"/>
 </head>
 <body>
+    <script>
+        function clicked() {
+            document.getElementById('submitBtn').value = 'Downloading..'
+            setTimeout(function () {
+            document.getElementById('submitBtn').value = 'Get Certificate'
+            }, 5000)
+      }
+    </script>
+
     <div class="container">
         <header>
             <!-- <div class="heading_text">
@@ -22,7 +31,7 @@
                 <p>സർട്ടിഫിക്കറ്റിൽ വരേണ്ട രൂപത്തിൽ നിങ്ങളുടെ പേര് താഴെ ഇംഗ്ലീഷിൽ ടൈപ്പ് ചെയ്യുക. ശേഷം Get Certificate എന്ന ഓപ്‌ഷനിൽ ക്ലിക്ക് ചെയ്യുക. </p>
                 <input type="text" name="Name" class="question" id="name" required autocomplete="off" />
                 <label for="name"><span>Enter your name?</span></label>
-                <input type="submit" id="submitBtn" value="Get Certificate"/>
+                <input type="submit" id="submitBtn" onclick="clicked()" value="Get Certificate"/>
             </div>
         </main>
     </div>
