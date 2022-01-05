@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Living Islam Online Academy</title>
-   
-    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <link rel="icon" type="image/png" href="favicon.png" />
 </head>
+
 <body>
     <script>
         function clicked() {
             document.getElementById('submitBtn').value = 'Downloading..'
             setTimeout(function () {
-            document.getElementById('submitBtn').value = 'Get Certificate'
+                document.getElementById('submitBtn').value = 'Get Certificate'
             }, 5000)
-      }
+        }
     </script>
 
     <div class="container">
@@ -23,15 +25,33 @@
                 <h1>Create Certificates for Free in Minutes</h1>
                 <h2>Make unique certificates in minutes. No design skills needed.</h2>
             </div> -->
-            
+
         </header>
         <img class="header_image" src="bg_header.jpeg">
         <main>
             <div>
-                <p>സർട്ടിഫിക്കറ്റിൽ വരേണ്ട രൂപത്തിൽ നിങ്ങളുടെ പേര് താഴെ ഇംഗ്ലീഷിൽ ടൈപ്പ് ചെയ്യുക. ശേഷം Get Certificate എന്ന ഓപ്‌ഷനിൽ ക്ലിക്ക് ചെയ്യുക. </p>
+                <p> <b>Fundamentals of Islam, level 1 </b> കോഴ്സിൽ നല്കിയ ഏഴ് വിഷയങ്ങളിലെ ക്ലാസ്സുകളും പൂർണമായി അറ്റൻഡ്
+                    ചെയ്തവർക്ക് മാത്രമാണ്
+                    Participation സർട്ടിഫിക്കറ്റ് നൽകുന്നത്.അല്ലാത്തവർക്ക് സർട്ടിഫിക്കറ്റിന് അപേക്ഷിക്കാൻ അർഹത
+                    ഉണ്ടാകുന്നതല്ല.</p>
+
+
+                <p> <b> സത്യസന്ധമായി വിവരങ്ങൾ നൽകുക.
+                        അല്ലാഹുവിനെ സൂക്ഷിക്കുക.</b> </p>
+
+                <!-- Checkbox: <input type="checkbox" id="myCheck"> -->
+
+                <button style="color: azure" onclick="check()">Yes</button>
+                <button style="color: azure" onclick="uncheck()">No</button>
+                <br>
+                <p>സർട്ടിഫിക്കറ്റിൽ വരേണ്ട രൂപത്തിൽ നിങ്ങളുടെ പേര് താഴെ ഇംഗ്ലീഷിൽ ടൈപ്പ് ചെയ്യുക. ശേഷം Get Certificate
+                    എന്ന ഓപ്‌ഷനിൽ ക്ലിക്ക് ചെയ്യുക. </p>
                 <input type="text" name="Name" class="question" id="name" required autocomplete="off" />
                 <label for="name"><span>Enter your name?</span></label>
-                <input type="submit" id="submitBtn" onclick="clicked()" value="Get Certificate"/>
+
+                <input type="submit" id="submitBtn" onclick="clicked()" value="Get Certificate" />
+                <input type="text" id="nonButton" onclick="clicked()" value="ക്ഷമിക്കണം, താങ്കൾക്ക്  participation certificate നൽകാൻ സാധിക്കുകയില്ല." />
+
             </div>
         </main>
     </div>
@@ -39,9 +59,24 @@
     <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
     <script src="filesaver.js"></script>
     <script src="index.js"></script>
-    
+    <script>
+        document.getElementById("nonButton").style.visibility = "hidden";
+        function check() {
+            // document.getElementById("myCheck").checked = true;
+            document.getElementById("nonButton").style.visibility = "hidden";
+            document.getElementById("submitBtn").style.visibility = "visible";
+        }
+
+        function uncheck() {
+            // document.getElementById("myCheck").checked = false;
+            document.getElementById("submitBtn").style.visibility = "hidden";
+            document.getElementById("nonButton").style.visibility = "visible";
+        }
+    </script>
+
 </body>
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+
 </html>
