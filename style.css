@@ -40,7 +40,7 @@ main {
       margin-top:25px ;
   }
   button {
-    background: #873e37;
+    background: #007500;
     color: #333;
     border: none;
     font-size: 0.8em;
@@ -133,7 +133,7 @@ input.question + label > span{
 }
 
 input[type="submit"] {
-    background:#873e37;
+    background:#007500;
     color: #fff;
     border: none;
     font-size: 0.8em;
